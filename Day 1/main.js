@@ -77,57 +77,59 @@
 // `` that i use in h1 to h6
 // classes
 
+
+
 // typescript  super type || is just javascript but added types
 // to prevent errors in productions and
 // assign values from diff types accidenlty
 // used to find errors early
 
-//const Name = prompt("Name");
-//const age = prompt("age");
-//const bith = prompt("bith");
+const Name = prompt("Name");
+const age = prompt("age");
+const bith = prompt("bith");
 
-//document.querySelector(
-//  ".tableDiv"
-//).innerHTML = `<table style='border: 1px solid black; border-collapse: collapse';>
-//    <tr >
-//    <th style="border: 1px solid black; padding: 10px;">Name </th>
-//    <th style="border: 1px solid black; padding: 10px;">${Name}</th>
-//    </tr>
-//    <tr>
-//    <th style="border: 1px solid black; padding: 10px;">BirthDay</th>
-//    <th style="border: 1px solid black; padding: 10px;">${bith}</th>
-//    </tr>
-//    <tr>
-//    <th style="border: 1px solid black; padding: 10px;">Age</th>
-//    <th style="border: 1px solid black; padding: 10px;">${age}</th>
-//    </tr>
-//    </table>
-//    `;
+document.querySelector(
+  ".tableDiv"
+).innerHTML = `<table style='border: 1px solid black; border-collapse: collapse';>
+    <tr >
+    <th style="border: 1px solid black; padding: 10px;">Name </th>
+    <th style="border: 1px solid black; padding: 10px;">${Name}</th>
+    </tr>
+    <tr>
+    <th style="border: 1px solid black; padding: 10px;">BirthDay</th>
+    <th style="border: 1px solid black; padding: 10px;">${bith}</th>
+    </tr>
+    <tr>
+    <th style="border: 1px solid black; padding: 10px;">Age</th>
+    <th style="border: 1px solid black; padding: 10px;">${age}</th>
+    </tr>
+    </table>
+    `;
 
 
 // Last task bouns 
-function handleSaveSkill() {
-  // Get the input value
-  let valToAddToSkill = document.querySelector(".input-skill").value;
-    if (valToAddToSkill.trim() === "") {
-    alert("Please enter a skill!");
-    return;
-  }
+//function handleSaveSkill() {
+//  // Get the input value
+//  let valToAddToSkill = document.querySelector(".input-skill").value;
+//    if (valToAddToSkill.trim() === "") {
+//    alert("Please enter a skill!");
+//    return;
+//  }
   
-  let parent = document.querySelector(".skills-container");
+//  let parent = document.querySelector(".skills-container");
   
-  let skillTag = document.createElement("span");
-  skillTag.className = "skill-tag";
+//  let skillTag = document.createElement("span");
+//  skillTag.className = "skill-tag";
   
-  skillTag.innerHTML = `${valToAddToSkill} <span class="delete-btn" onclick="deleteSkill(this)">×</span>`;
+//  skillTag.innerHTML = `${valToAddToSkill} <span class="delete-btn" onclick="deleteSkill(this)">×</span>`;
   
-  parent.appendChild(skillTag);
+//  parent.appendChild(skillTag);
   
-  document.querySelector(".input-skill").value = "";
+//  document.querySelector(".input-skill").value = "";
   
-  console.log("Skill added:", valToAddToSkill);
-}
+//  console.log("Skill added:", valToAddToSkill);
+//}
 
-function deleteSkill(element) {
-  element.parentElement.remove();
-}
+//function deleteSkill(element) {
+//  element.parentElement.remove();
+//}
