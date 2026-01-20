@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Document</title>
 </head>
+
 <body>
-  
-  <input type="text" >
+
+  <!--<input type="text">
+  <button onclick="saveCookie()">Save Cookie</button>
+  <button onclick="deleteCookie()">deleteCookie</button>
+  <button onclick="displayCookie()">display</button>
+  <hr>-->
+
+  name :<input type="text" class="name">
+  age:<input type="number" class="age">
+  <hr>
+  <!-- Photo 1 -->
+  <label class="photo-option" id="label1">
+    <input type="radio" name="photo" value="male" />
+    <img src="male.png" alt="Photo 1" width="150" />
+  </label>
+
+  <!-- Photo 2 -->
+  <label class="photo-option" id="label2">
+    <input type="radio" name="photo" value="female" />
+    <img src="female.png" alt="Photo 2" width="150" />
+  </label>
+
+
+  <button onclick="register()">Register</button>
   <script src="script.js"></script>
 </body>
+
 </html>
