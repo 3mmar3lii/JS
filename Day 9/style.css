@@ -1,0 +1,22 @@
+.tabStyle {
+  padding: 10px 18px;
+  margin: 6px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  background: #eee;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tabStyle:hover {
+  background: #ddd;
+}
+
+.tabStyle.active {
+  background: #fff;
+  border-bottom: 2px solid transparent;
+}
+
+.todo-container{
+  background-color: aqua;
+}
