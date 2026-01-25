@@ -26,19 +26,20 @@ async function handleGetUserData(userId) {
     const userData = await fetch(`https://dummyjson.com/users/${userId}/todos`);
     const userInfo = await userData.json();
 
-    const userToDo = document.createElement("div");
-    userToDo.classList.add("todo-container");
-    userInfo.todos.forEach((todo) => {
-      userToDo.innerHTML = ``;
-      const todoItem = document.createElement("p");
-      todoItem.textContent = todo.todo;
-      userToDo.appendChild(todoItem);
-    });
+    let userToDo = document.querySelector(".todo-container");
 
-    document.body.appendChild(userToDo);
+    if (!userToDo) {
+      userToDo = document.createElement("div");
+      userToDo.classList.add("todo-container");
+      document.body.appendChild(userToDo);
+    }
+
+    userToDo.innerHTML = "";
+
+    userInfo.todos.forEach((todo) => {
+      userToDo.innerHTML += `<p>${todo.todo}</p>`;
+    });
   } catch (err) {
     console.log(err);
   }
 }
-
-
