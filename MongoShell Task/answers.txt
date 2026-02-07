@@ -1,0 +1,41 @@
+1- use myDatabaseName
+2- db.createCollection("Student")
+  - db.Student.insertOne({ FirstName: "Ammar", LastName: "Ali", Age: 22, Faculty: { Name: "FCI", Address: "Cairo" },
+   Grades: [ { CourseName: "DB", Grade: 90, Pass: true }, 
+   { CourseName: "OS", Grade: 75, Pass: true } ], IsFired: false })
+
+3-  show collections 
+  -- InsertMany => db.Student.insertMany([
+  { FirstName: "Sara", LastName: "Mohamed", Age: 21, Faculty: { Name: "Engineering", Address: "Giza" }, Grades: [ { CourseName: "Math", Grade: 85, Pass: true } ], IsFired: false },
+  { FirstName: "Omar", LastName: "Hassan", Age: 23, Faculty: { Name: "Science", Address: "Alex" }, Grades: [ { CourseName: "Physics", Grade: 55, Pass: false } ], IsFired: true }
+])
+  -- InsertOne => db.Student.insertOne({ FirstName: "Ammar", LastName: "Ali", Age: 22, Faculty: { Name: "FCI", Address: "Cairo" },
+   Grades: [ { CourseName: "DB", Grade: 90, Pass: true }, 
+   { CourseName: "OS", Grade: 75, Pass: true } ], IsFired: false })
+
+4-
+  --  db.Student.find()
+  -- db.Student.find({ FirstName: "Ahmed" })
+  --db.Student.find({ $or: [{ FirstName: "Ahmed" }, { LastName: "Ahmed" }] })
+  -- db.Student.find({ FirstName: { $ne: "Ahmed" } })
+  -- db.Student.find({ Age: { $lt: 22 } })
+  -- db.Student.find({ IsFired: true })
+  --db.Student.find(
+  { FirstName: "Ammar" }, 
+  { _id: 0, FirstName: 1, LastName: 1, IsFired: 1 }
+)
+
+
+
+
+-------------
+ use FacultySystemV2
+ db.createCollection("Student")
+ db.Student.insertOne({fristName:"jana",lastName:"wael",isFired:true,FacultyId:[{courseId:1,grade:3},{courseId:2,grade:4}]})
+  db.Faculty.insertOne({facultyName:"tanat",address:"tanta sebeabi"})
+   db.Course.insertOne({courseName:"CS course ",finalMark:100})
+    db.Course.insertMany([
+...   { courseName: "IT Course", finalMark: 100 },
+...   { courseName: "IS course", finalMark: 100 }
+... ])
+...
